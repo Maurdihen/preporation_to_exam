@@ -25,8 +25,8 @@ jobs:
       - name: render config
         run: |
           mkdir deploy
-          cat docker-compose-ci.yaml | envsubst > deploy/docker-compose.yaml
-          cat default_ci_config.py | envsubst > deploy/default_config.py
+          cat docker-compose-ci.yml | envsubst > deploy/docker-compose.yaml
+          cat default_config_сi.py | envsubst > deploy/default_config.py
       - name: copy files to server
         uses: appleboy/scp-action@v0.1.4
         with:
