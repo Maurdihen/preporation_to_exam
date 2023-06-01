@@ -6,6 +6,15 @@ from views.birthday import birthday_ns
 
 
 def create_app(config: Config) -> Flask:
+    """
+    Создает и конфигурирует экземпляр приложения Flask.
+
+    Args:
+        config (Config): Конфигурационный объект для настройки приложения.
+
+    Returns:
+        Flask: Экземпляр приложения Flask.
+    """
     application = Flask(__name__)
     application.config.from_object(config)
     application.app_context().push()
@@ -14,6 +23,12 @@ def create_app(config: Config) -> Flask:
 
 
 def register_extensions(application: Flask) -> None:
+    """
+    Регистрирует расширения приложения.
+
+    Args:
+        application (Flask): Экземпляр приложения Flask.
+    """
     db.init_app(application)
     api = Api(application)
     api.add_namespace(birthday_ns)
