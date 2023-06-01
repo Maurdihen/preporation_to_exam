@@ -15,8 +15,7 @@ class NotesView(Resource):
 
     def get(self):
         birthdays = birthday_service.get_all()
-        # return birthdays_schema.dump(birthdays), 200
-        return "hello"
+        return birthdays_schema.dump(birthdays), 200
 
     def post(self):
         data = request.json
