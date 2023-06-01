@@ -2,7 +2,7 @@ from flask import Flask
 from flask_restx import Api
 from default_config import Config
 from setup_db import db
-from views.notes import note_ns
+from views.birthday import birthday_ns
 
 
 def create_app(config: Config) -> Flask:
@@ -16,7 +16,7 @@ def create_app(config: Config) -> Flask:
 def register_extensions(application: Flask) -> None:
     db.init_app(application)
     api = Api(application)
-    api.add_namespace(note_ns)
+    api.add_namespace(birthday_ns)
 
 
 app_config = Config()

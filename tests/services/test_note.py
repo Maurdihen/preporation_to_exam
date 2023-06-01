@@ -1,8 +1,8 @@
 import pytest
 from unittest.mock import MagicMock
-from dao.models.note import Note
-from dao.note_dao import NoteDAO
-from services.note_service import NoteService
+from dao.models.birthday import Note
+from dao.birthday_dao import NoteDAO
+from services.birthday_service import NoteService
 
 
 @pytest.fixture

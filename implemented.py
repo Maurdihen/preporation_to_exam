@@ -1,6 +1,6 @@
-from dao.note_dao import NoteDAO
-from services.note_service import NoteService
+from dao.birthday_dao import BirthdayDAO
+from services.birthday_service import BirthdayService
 from setup_db import db
 
-note_dao = NoteDAO(db.session)
-note_service = NoteService(dao=note_dao)
+birthday_dao = BirthdayDAO(db.session)
+birthday_service = BirthdayService(dao=birthday_dao)
