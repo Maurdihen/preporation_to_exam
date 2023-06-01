@@ -53,4 +53,12 @@
 - `.github/workflows/action.yml` определяет рабочий процесс GitHub Actions для CI/CD.
 - `docker-compose-ci.yml` определяет конфигурацию Docker Compose для развертывания приложения.
 
+## Отправка POST запроса
 
+Отправить пост запрос можно таким образом:
+`{
+"full_name": "John Doeцйав",
+"birthday_date": "2000-01-01",
+"present": "Gift"
+}
+`
