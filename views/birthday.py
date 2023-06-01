@@ -1,5 +1,6 @@
 from flask import request
 from flask_restx import Resource, Namespace
+
 from dao.models.birthday import BirthdaysSchema
 from implemented import birthday_service
 
@@ -9,13 +10,13 @@ birthday_ns = Namespace('birthday')
 birthday_schema = BirthdaysSchema()
 birthdays_schema = BirthdaysSchema(many=True)
 
-
 @birthday_ns.route('/')
 class NotesView(Resource):
 
     def get(self):
         birthdays = birthday_service.get_all()
-        return birthdays_schema.dump(birthdays), 200
+        # return birthdays_schema.dump(birthdays), 200
+        return "hello"
 
     def post(self):
         data = request.json
