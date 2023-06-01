@@ -1,4 +1,4 @@
-# Preparation for Exam
+# Exam
 
 Проект представляет собой приложение Flask, которое включает в себя операции CRUD (Create, Read, Update, Delete) для заметок. Он использует SQLAlchemy для работы с базой данных и Marshmallow для сериализации объектов.
 
